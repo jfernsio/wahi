@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Product Catalog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* Styles go here */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header styles */
+    header {
+      background-color:  #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .search-bar input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .search-bar button {
+      padding: 8px 12px;
+      background-color: #555;
+      color: #fff;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      color: #fff;
+    }
+
+    .cart-icon,
+    .account-icon {
+      margin-left: 20px;
+    }
+
+    /* Main content styles */
+    main {
+      display: flex;
+      padding: 20px;
+    }
+
+    .sidebar {
+      flex: 0 0 200px;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    .category-filter ul,
+    .price-filter {
+      list-style-type: none;
+    }
+
+    .product-list {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background-color: #f5f5f5;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .rating {
+      color: gold;
+    }
+
+    .add-to-cart {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #333 ;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .footer-links .col {
+      margin: 0 20px;
+    }
+
+    .footer-links h4 {
+      margin-bottom: 10px;
+    }
+
+    .footer-links ul {
+      list-style-type: none;
+    }
+
+    .social-links a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="#"><img src="logo.png" alt="Logo"></a>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search products...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">Sale</a>
+        <a href="#">About</a>
+      </div>
+      <div class="cart-icon">
+        <a href="#"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
+      </div>
+      <div class="account-icon">
+        <a href="#"><i class="fas fa-user"></i> Account</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="sidebar">
+      <div class="category-filter">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Electronics</a></li>
+          <li><a href="#">Home & Kitchen</a></li>
+          <!-- Add more categories here -->
+        </ul>
+      </div>
+      <div class="price-filter">
+        <h3>Price Range</h3>
+        <input type="range" min="0" max="1000" value="500">
+        <span>$0 - $1000</span>
+      </div>
+    </div>
+
+    <div class="product-list">
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product 1</h3>
+        <p class="price">$19.99</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <!-- Add more product cards here -->
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <div class="col">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Returns & Exchanges</a></li>
+          <li><a href="#">Shipping & Delivery</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <!-- Add more columns here -->
+    </div>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2023 E-Commerce Website. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript logic goes here
+  </script>
+</body>
+</html>
